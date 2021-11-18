@@ -33,15 +33,11 @@ public class Multithread {
         }
         int n = 4;
         System.out.println("list: ");
-        for(int i=0; i < l.size(); i++){
-            System.out.println(l.get(i));
-        };
+        l.stream().forEach(System.out::print);
+        
         for (int i = 0; i <= n; i++) {
             MultithreadingDemo object = new MultithreadingDemo(l);
             object.start();
         }
-
-
-
     }
 }
